@@ -22,15 +22,34 @@ class AlienInvasion:
 		""" Start the main loop """
 		while True:
 			# Monitor events from keyboard and mouse
+			self._check_events()
+			'''
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					sys.exit()
+			'''
 
+			self._update_screen()
+			'''
 			self.screen.fill(self.bg_color)
 			self.ship.blitme()
 
 			# Visualize the most recent screen
 			pygame.display.flip()
+			'''
+			
+	def _check_events(self):
+		""" Helper method: respond to events """
+		for event in pygme.event.get():
+			if event.type == pygame.QUIT:
+				sys.exit()
+	def _update_screen(self):
+		""" Helper method: update screen """
+		self.screen.fill(self.bg_color)
+		self.ship.blitme()
+		pygame.display.flip()
+
+
 
 if __name__ == '__main__':
 	# Create instance and run
