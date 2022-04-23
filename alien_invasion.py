@@ -29,6 +29,8 @@ class AlienInvasion:
 					sys.exit()
 			'''
 
+			self.ship.update()
+
 			self._update_screen()
 			'''
 			self.screen.fill(self.bg_color)
@@ -43,6 +45,13 @@ class AlienInvasion:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				sys.exit()
+			elif event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_RIGHT:
+					self.ship.moving_right = True
+			elif event.type == pygame.KEYUP:
+				if event.key == pygame.K_RIGHT:
+					self.ship.moving_right = False
+
 	def _update_screen(self):
 		""" Helper method: update screen """
 		self.screen.fill(self.bg_color)
