@@ -8,4 +8,4 @@ class Settings:
 		# Background color grey
 		# self.bg_color = (230, 230, 230)
 		# Background color blue
-		elf.bg_color = (0, 0, 255)
+		self.bg_color = (0, 0, 255)
