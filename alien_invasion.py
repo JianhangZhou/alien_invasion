@@ -16,7 +16,7 @@ class AlienInvasion:
 		self.ship = Ship(self)
 
 		# Set background color
-		self.bg_color = (230, 230, 230)
+		self.bg_color = self.settings.bg_color
 
 	def run_game(self):
 		""" Start the main loop """
@@ -40,7 +40,7 @@ class AlienInvasion:
 			
 	def _check_events(self):
 		""" Helper method: respond to events """
-		for event in pygme.event.get():
+		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				sys.exit()
 	def _update_screen(self):
