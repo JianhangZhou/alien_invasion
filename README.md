@@ -1,4 +1,8 @@
-# alien_invasion
-A game using Pygame
+# Background
+Aliens are COMING!
 
-Based on Chapter 12, 13, 14 in *Python Crash Course* by Eric Matthes
+They are real!
+
+You have three jet fighters to combat the aliens.
+
+Take off, and defend your people!
