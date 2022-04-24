@@ -5,7 +5,8 @@ class Bullet(Sprite):
 	""" Manage bullets """
 	def __init__(self, ai_game):
 		""" Create a bullet in front of ship """
-		super(Sprite, self).__init__()
+		# super(Sprite, self).__init__()
+		Sprite.__init__(self)
 		self.screen = ai_game.screen
 		self.settings = ai_game.settings
 		self.color = self.settings.bullet_color
